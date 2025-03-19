@@ -9,7 +9,10 @@ demo:
 
 Quick setup:
 ```bash
+git clone --depth 1 https://github.com/wbthomason/packer.nvim \
+  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 if [ -f "$HOME/.config/nvim/init.lua" ]; then mv "$HOME/.config/nvim/init.lua" "$HOME/.config/nvim/init.lua.old"; fi
 cd /tmp && git clone https://github.com/arsalanyavari/neovim-config-similar-vscode \
+&& mkdir -p $HOME/.config/nvim \
 && mv neovim-config-similar-vscode/init.lua $HOME/.config/nvim/init.lua && nvim '+PackerInstall'
 ``` 
